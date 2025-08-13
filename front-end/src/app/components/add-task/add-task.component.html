@@ -1,0 +1,12 @@
+<div>
+  <mat-form-field class="example-form-field w-100" >
+    <mat-label>Add a task...</mat-label>
+    <input matInput type="text" [(ngModel)]="value">
+    <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+  <div class="d-flex justify-content-center">
+    <button mat-raised-button color="primary" (click)="addTask()" (keydown.enter)="addTask()"> Add Task </button>
+  </div>
+</div>

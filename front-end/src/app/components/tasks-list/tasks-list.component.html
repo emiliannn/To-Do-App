@@ -1,0 +1,8 @@
+<mat-card>
+  <ng-container *ngIf="taskList">
+    <div class="task-container" *ngFor="let task of taskList; index as i">
+      <app-task [task]="task" (taskEventEmitter)="getTasks()"></app-task>
+    </div>
+  </ng-container>
+    
+  </mat-card>
